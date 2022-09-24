@@ -103,10 +103,10 @@ msgid "Select all copy source"
 msgstr "복사 원본 전체 선택"
 
 msgid "Set bone where X > 0"
-msgstr "X > 0のボーンを元に設定"
+msgstr "X > 0의 본(오른쪽 본)을 바탕으로 설정"
 
 msgid "Set bone where X < 0"
-msgstr "X < 0のボーンを元に設定"
+msgstr "X > 0의 본(왼쪽 본)을 바탕으로 설정"
 
 msgid "Source"
 msgstr "원본"
@@ -389,7 +389,7 @@ msgid "Select Bone"
 msgstr "본 선택"
 
 msgid "Select Base Point"
-msgstr "Base Point 선택"
+msgstr "Pivot 선택"
 
 msgid "Manager"
 msgstr "매니저"
