@@ -218,7 +218,7 @@ msgid "Delete SpringBone"
 msgstr "선택된 스프링본 삭제"
 
 msgid "Delete Managers and Bones of Selection and Children"
-msgstr "선택된 본 및 자식 본 삭제"
+msgstr "선택된 오브젝트 이하 SpringManager와 SpringBone 컴포넌트 삭제"
 
 msgid "Collision"
 msgstr "콜라이더"
@@ -230,7 +230,7 @@ msgid "Capsule"
 msgstr "Capsule"
 
 msgid "Quad"
-msgstr "Quad"
+msgstr "Panel"
 
 msgid "Fit capsule place to parent"
 msgstr "캡슐 위치를 부모로"

@@ -10,6 +10,9 @@ namespace Unity.Animations.SpringBones
         public static void DestroyUnityObject(UnityEngine.Object objectToDestroy)
         {
 #if UNITY_EDITOR
+            if(objectToDestroy == null) {
+                return;
+            }
             UnityEditor.Undo.DestroyObjectImmediate(objectToDestroy);
 #else
             Object.DestroyImmediate(objectToDestroy);
@@ -23,14 +26,12 @@ namespace Unity.Animations.SpringBones
             DestroyPivotObjects(rootObject);
 
             var springManagers = rootObject.GetComponentsInChildren<SpringManager>(true);
-            foreach (var manager in springManagers)
-            {
+            foreach(var manager in springManagers) {
                 DestroyUnityObject(manager);
             }
 
             var springBones = rootObject.GetComponentsInChildren<SpringBone>(true);
-            foreach (var springBone in springBones)
-            {
+            foreach(var springBone in springBones) {
                 DestroyUnityObject(springBone);
             }
         }
@@ -38,8 +39,7 @@ namespace Unity.Animations.SpringBones
         // 全子供にSpringBoneを見つけて、springManagerに割り当てる
         public static void FindAndAssignSpringBones(SpringManager springManager, bool includeInactive = false)
         {
-            if (springManager != null)
-            {
+            if(springManager != null) {
                 var sortedBones = GetSpringBonesSortedByDepth(springManager.gameObject, includeInactive);
                 springManager.springBones = sortedBones.ToArray();
             }
@@ -48,16 +48,14 @@ namespace Unity.Animations.SpringBones
         // オブジェクトとその子供にSpringBoneを当てる
         public static void AssignSpringBonesRecursively(Transform rootObject)
         {
-            if (rootObject.childCount == 0) { return; }
+            if(rootObject.childCount == 0) { return; }
 
             var springBone = rootObject.gameObject.GetComponent<SpringBone>();
-            if (springBone == null)
-            {
+            if(springBone == null) {
                 springBone = rootObject.gameObject.AddComponent<SpringBone>();
             }
 
-            for (var childIndex = 0; childIndex < rootObject.childCount; ++childIndex)
-            {
+            for(var childIndex = 0; childIndex < rootObject.childCount; ++childIndex) {
                 var child = rootObject.GetChild(childIndex);
                 AssignSpringBonesRecursively(child);
             }
@@ -71,11 +69,9 @@ namespace Unity.Animations.SpringBones
 
             // Collect pivots and their bones
             var pivotDictionary = new Dictionary<Transform, List<SpringBone>>();
-            foreach (var springBone in springBones)
-            {
+            foreach(var springBone in springBones) {
                 List<SpringBone> pivotBones = null;
-                if (!pivotDictionary.TryGetValue(springBone.pivotNode, out pivotBones))
-                {
+                if(!pivotDictionary.TryGetValue(springBone.pivotNode, out pivotBones)) {
                     pivotBones = new List<SpringBone>();
                 }
                 pivotBones.Add(springBone);
@@ -88,12 +84,10 @@ namespace Unity.Animations.SpringBones
         public static void FixAllPivotNodePositions(GameObject rootObject)
         {
             var pivotToSpringBoneMap = GetPivotToSpringBoneMap(rootObject);
-            foreach (var item in pivotToSpringBoneMap)
-            {
+            foreach(var item in pivotToSpringBoneMap) {
                 var position = Vector3.zero;
                 var springBones = item.Value;
-                foreach (var springBone in springBones)
-                {
+                foreach(var springBone in springBones) {
                     position += springBone.transform.position;
                 }
                 position /= springBones.Count;
@@ -111,11 +105,9 @@ namespace Unity.Animations.SpringBones
             pivotObject.AddComponent<SpringBonePivot>();
 
             var oldPivotNode = springBone.pivotNode;
-            if (oldPivotNode != null)
-            {
+            if(oldPivotNode != null) {
                 var skinBones = GameObjectUtil.GetAllBones(springBone.transform.root.gameObject);
-                if (IsPivotProbablySafeToDestroy(oldPivotNode, skinBones))
-                {
+                if(IsPivotProbablySafeToDestroy(oldPivotNode, skinBones)) {
                     DestroyUnityObject(oldPivotNode.gameObject);
                 }
             }
@@ -123,15 +115,13 @@ namespace Unity.Animations.SpringBones
             springBone.pivotNode = pivotObject.transform;
 
             springBone.yAngleLimits.active = true;
-            if (springBone.yAngleLimits.min > -0.5f && springBone.yAngleLimits.max < 0.5f)
-            {
+            if(springBone.yAngleLimits.min > -0.5f && springBone.yAngleLimits.max < 0.5f) {
                 springBone.yAngleLimits.min = -20f;
                 springBone.yAngleLimits.max = 20f;
             }
 
             springBone.zAngleLimits.active = true;
-            if (springBone.zAngleLimits.min > -0.5f && springBone.zAngleLimits.max < 0.5f)
-            {
+            if(springBone.zAngleLimits.min > -0.5f && springBone.zAngleLimits.max < 0.5f) {
                 springBone.zAngleLimits.min = 0f;
                 springBone.zAngleLimits.max = 20f;
             }
@@ -142,16 +132,14 @@ namespace Unity.Animations.SpringBones
         public static bool IsPivotProbablySafeToDestroy(Transform pivot, IEnumerable<Transform> skinBones)
         {
             // Definitely not safe to destroy
-            if (skinBones.Contains(pivot)
+            if(skinBones.Contains(pivot)
                 || pivot.childCount > 0
-                || pivot.GetComponent<Renderer>() != null)
-            {
+                || pivot.GetComponent<Renderer>() != null) {
                 return false;
             }
 
             // Definitely safe to destroy
-            if (pivot.GetComponent<SpringBonePivot>() != null)
-            {
+            if(pivot.GetComponent<SpringBonePivot>() != null) {
                 return true;
             }
 
@@ -166,7 +154,7 @@ namespace Unity.Animations.SpringBones
         // Warning: maybe dangerous!
         private static void DestroyPivotObjects(GameObject rootObject)
         {
-            if (rootObject == null) { return; }
+            if(rootObject == null) { return; }
 
             var springBones = rootObject.GetComponentsInChildren<SpringBone>(true);
             var pivots = from springBone in springBones
@@ -180,8 +168,7 @@ namespace Unity.Animations.SpringBones
 
             var objectsToDestroy = maybeSafeToDestroyPivots.Select(pivot => pivot.gameObject).ToList();
             var objectCount = objectsToDestroy.Count;
-            for (int objectIndex = 0; objectIndex < objectCount; objectIndex++)
-            {
+            for(int objectIndex = 0; objectIndex < objectCount; objectIndex++) {
                 DestroyUnityObject(objectsToDestroy[objectIndex]);
             }
         }
@@ -200,28 +187,23 @@ namespace Unity.Animations.SpringBones
 
             var closestDistanceSquared = 1000000f;
             var closestNormal = Vector3.up;
-            foreach (var mesh in meshes)
-            {
+            foreach(var mesh in meshes) {
                 var vertices = mesh.vertices;
                 var normals = mesh.normals;
-                if (vertices != null
+                if(vertices != null
                     && normals != null
-                    && vertices.Length == normals.Length)
-                {
+                    && vertices.Length == normals.Length) {
                     var closestVertexIndex = -1;
                     var vertexCount = vertices.Length;
-                    for (int vertexIndex = 0; vertexIndex < vertexCount; vertexIndex++)
-                    {
+                    for(int vertexIndex = 0; vertexIndex < vertexCount; vertexIndex++) {
                         var distanceSquared = (vertices[vertexIndex] - sourcePoint).sqrMagnitude;
-                        if (distanceSquared < closestDistanceSquared)
-                        {
+                        if(distanceSquared < closestDistanceSquared) {
                             closestVertexIndex = vertexIndex;
                             closestDistanceSquared = distanceSquared;
                         }
                     }
 
-                    if (closestVertexIndex != -1)
-                    {
+                    if(closestVertexIndex != -1) {
                         closestNormal = mesh.normals[closestVertexIndex];
                     }
                 }
@@ -242,8 +224,7 @@ namespace Unity.Animations.SpringBones
             var upDirection = Vector3.Cross(meshNormal, lookDirection).normalized;
             var possibleSideDirection = Vector3.Cross(lookDirection, upDirection).normalized;
             var isSideDirectionValid = IsPivotSideDirectionValid(lookDirection, possibleSideDirection);
-            if (isSideDirectionValid)
-            {
+            if(isSideDirectionValid) {
                 sideDirection = possibleSideDirection;
             }
             return isSideDirectionValid;
@@ -255,16 +236,13 @@ namespace Unity.Animations.SpringBones
             lookDirection.Normalize();
 
             Vector3 sideDirection;
-            if (!TryToGetPivotSideDirection(springBone, lookDirection, out sideDirection))
-            {
+            if(!TryToGetPivotSideDirection(springBone, lookDirection, out sideDirection)) {
                 sideDirection = springBone.transform.position;
                 sideDirection.y = 0f;
                 sideDirection.Normalize();
-                if (!IsPivotSideDirectionValid(lookDirection, sideDirection))
-                {
+                if(!IsPivotSideDirectionValid(lookDirection, sideDirection)) {
                     sideDirection = Vector3.up;
-                    if (!IsPivotSideDirectionValid(lookDirection, sideDirection))
-                    {
+                    if(!IsPivotSideDirectionValid(lookDirection, sideDirection)) {
                         sideDirection = Vector3.forward;
                     }
                 }
@@ -272,8 +250,7 @@ namespace Unity.Animations.SpringBones
 
             var flattenedPosition = springBone.transform.position;
             flattenedPosition.y = 0f;
-            if (Vector3.Dot(sideDirection, flattenedPosition) < 0f)
-            {
+            if(Vector3.Dot(sideDirection, flattenedPosition) < 0f) {
                 sideDirection = -sideDirection;
             }
 
