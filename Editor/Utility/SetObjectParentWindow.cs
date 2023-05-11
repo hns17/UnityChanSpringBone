@@ -16,7 +16,7 @@ namespace Unity.Animations.SpringBones
         }
 
 
-        [MenuItem("Window/Animation/SpringBone/Parenting Tool")]
+        [MenuItem(EnvironmentVariable.menuPath + "/Parenting Tool")]
         public static void ShowWindow()
         {
             GetWindow<SetObjectParentWindow>(Styles.editorWindowTitle);

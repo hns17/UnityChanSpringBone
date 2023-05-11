@@ -20,7 +20,7 @@ namespace Unity.Animations.SpringBones
             public static readonly string textSelectingMultipleObjectFormat = L10n.Tr("Selecting {0} objects");
         }
 
-        [MenuItem("Window/Animation/SpringBone/Name Selector Tool")]
+        [MenuItem(EnvironmentVariable.menuPath + "/Name Selector Tool")]
         public static void ShowWindow()
         {
             var window = GetWindow<FindGameObjectsWindow>(Styles.editorWindowTitle);

@@ -42,10 +42,11 @@ namespace Unity.Animations.SpringBones
             public static readonly string labelShowBoneName = (L10n.Tr("Show bone names"));
         }
 
-        private const string kIconDirectoryPath = "Packages/com.unity.springbone/Editor/GUI/Icons"; 
-        
+        //private const string kIconDirectoryPath = "Packages/com.unity.springbone_kor/Editor/GUI/Icons"; 
+        private const string kIconDirectoryPath = "Assets/com.unity.springbone_kor/Editor/GUI/Icons";
 
-        [MenuItem("Window/Animation/SpringBone/SpringBone")]
+
+        [MenuItem(EnvironmentVariable.menuPath + "/SpringBone")]
         public static void ShowWindow()
         {
             var window = GetWindow<SpringBoneWindow>(Styles.editorWindowTitle);

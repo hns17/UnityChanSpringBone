@@ -88,7 +88,7 @@ msgid "SpringBone Mirror"
 msgstr "SpringBone Mirror"
 
 msgid "Do Mirror"
-msgstr "Do Mirror"
+msgstr "반사하기"
 
 msgid "Get from selection"
 msgstr "선택에서 가져오기"
@@ -209,7 +209,7 @@ msgid "Fit to initial bone list"
 msgstr "본 리스트 정보 초기화"
 
 msgid "Mirror SpringBones"
-msgstr "Mirror SpringBones"
+msgstr "Mirror 윈도우"
 
 msgid "Select this and child bones"
 msgstr "본과 자식 본 선택"
@@ -224,13 +224,13 @@ msgid "Collision"
 msgstr "콜라이더"
 
 msgid "Sphere"
-msgstr "Sphere"
+msgstr "구"
 
 msgid "Capsule"
-msgstr "Capsule"
+msgstr "캡슐"
 
 msgid "Quad"
-msgstr "Panel"
+msgstr "패널"
 
 msgid "Fit capsule place to parent"
 msgstr "캡슐 위치를 부모로"
@@ -242,7 +242,7 @@ msgid "Delete collider of selection and children"
 msgstr "대상 및 자식 콜라이더 삭제"
 
 msgid "Cleanup"
-msgstr "Cleanup"
+msgstr "정리하기"
 
 msgid "Show"
 msgstr "Show"
