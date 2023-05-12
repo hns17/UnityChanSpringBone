@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: bdd45c88f8880794d97918390fd4eccc
+=======
+guid: 63ac9b2f09aabc141b3f32072c76d94c
+>>>>>>> ucsb_kor
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
