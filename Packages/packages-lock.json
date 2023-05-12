@@ -94,13 +94,6 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-    "com.unity.springbone_kor": {
-      "version": "https://github.com/hns17/UnityChanSpringBone.git?path=Assets/ucsb_kor#ucsb_kor",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "a299fab8d6f48bb208933baf23174041548d12eb"
-    },
     "com.unity.test-framework": {
       "version": "1.1.31",
       "depth": 0,
