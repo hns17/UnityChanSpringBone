@@ -37,7 +37,7 @@
 ##### 라. Unity Pacakge Manager를 통해 UCSB 설치
 
 - 패키지매니저에서 GitURL 추가하기
-  - url : https://github.com/hns17/UnityChanSpringBone.git?path=Assets/ucsb_kor#ucsb_kor
+  - url : https://github.com/hns17/UnityChanSpringBone.git?path=Assets/ucsb_kor
 
 ![image-20220924115138007](https://raw.githubusercontent.com/hns17/ImageContainer/main/img/image-20220924115138007.png)
 
