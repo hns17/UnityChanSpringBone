@@ -1,0 +1,464 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: Sun Sep 11 2022 05:00:00 GMT+0000 (Coordinated Universal "
+"Time)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+
+# MenuItem
+msgid "Parenting Tool"
+msgstr "Parenting Tool"
+
+# MenuItem
+msgid "Name Selector Tool"
+msgstr "Name Selector Tool"
+
+# MenuItem
+msgid "SpringBone"
+msgstr "스프링본"
+
+msgid "Loading Configuration"
+msgstr "로딩중"
+
+msgid "Cancel"
+msgstr "취소"
+
+msgid "Set up from CSV file"
+msgstr "CSV 불러온 후 Setup"
+
+msgid "Select root from selection"
+msgstr "루트 선택하기"
+
+msgid "SpringBone root"
+msgstr "스프링본 루트"
+
+msgid "Collider"
+msgstr "콜라이더"
+
+msgid "Do not setup in Play Mode"
+msgstr "플레이 모드에서 Setup 할수 없음"
+
+msgid "Select parent object of the spring bone"
+msgstr "스프링본의 부모객체를 지정해야 합니다"
+
+msgid "Load spring bone setup"
+msgstr "스프링본 설정 불러오기"
+
+msgid ""
+"Set up complete:{0}\n"
+"Number of bones: {1} Number of colliders: {2}"
+msgstr ""
+"설정완료: {0}\n"
+"본 수: {1} 콜라이더 수: {2}"
+
+msgid "CSV File"
+msgstr "CSV파일"
+
+msgid "Text File"
+msgstr "Text파일"
+
+msgid ""
+"SpringBone setup failed.\n"
+"Souce data may contain errors,\n"
+"or the data don't match the character.\n"
+"Please refer console logs for further info.\n"
+"\n"
+"Character: {0}\n"
+"\n"
+"Path: {1}"
+msgstr ""
+"스프링본 설정 실패\n"
+"원본데이터에 문제가 있거나\n"
+"캐릭터와 데이터가 일치하지 않습니다\n"
+"자세한 내용은 Console 로그를 참조하십시오.\n"
+"\n"
+"캐릭터: {0}\n"
+"\n"
+"Path: {1}"
+
+msgid "SpringBone Setup"
+msgstr "스프링본 설정"
+
+msgid "SpringBone Setup failed:{0}\nPath:{1}"
+msgstr "스프링본 설정 오류:{0}\nPath:{1}"
+
+msgid "SpringBone Mirror"
+msgstr "SpringBone Mirror"
+
+msgid "Do Mirror"
+msgstr "반사하기"
+
+msgid "Get from selection"
+msgstr "선택에서 가져오기"
+
+msgid "Select All"
+msgstr "전체선택"
+
+msgid "Select all copy destination"
+msgstr "복사 대상 전체 선택"
+
+msgid "Select all copy source"
+msgstr "복사 원본 전체 선택"
+
+msgid "Set bone where X > 0"
+msgstr "X > 0의 본(오른쪽 본)을 바탕으로 설정"
+
+msgid "Set bone where X < 0"
+msgstr "X > 0의 본(왼쪽 본)을 바탕으로 설정"
+
+msgid "Source"
+msgstr "원본"
+
+msgid "→ Destination"
+msgstr "→ 대상"
+
+msgid "Save SpringBone Setup"
+msgstr "스프링본 설정 저장하기"
+
+msgid "Export Setting"
+msgstr "설정 내보내기"
+
+msgid "Get root from selection"
+msgstr "선택에서 루트 가져오기"
+
+msgid "Save to CSV"
+msgstr "CSV로 저장"
+
+msgid ""
+"File already exists. Overwrite?\n"
+"\n"
+msgstr ""
+"파일이 이미 존재합니다. 덮어쓰겠습니까?\n"
+"\n"
+
+msgid "Save SpringBone"
+msgstr "스프링본 저장"
+
+msgid "Overwrite"
+msgstr "덮어쓰기"
+
+msgid "Saved.: {0}"
+msgstr "저장했습니다.: {0}"
+
+msgid "Setup Dynamics"
+msgstr "Setup Dynamics"
+
+msgid ""
+"There are errors in dynamics setup. Do you want to create only ones without "
+"error(s)?"
+msgstr ""
+"Dynamics Setup 중 오류가 있습니다. 정상적인 것만"
+"생성할까요?"
+
+msgid "SpringBone Root"
+msgstr "스프링본 루트"
+
+msgid "Collider Root"
+msgstr "콜라이더 루트"
+
+msgid "Path"
+msgstr "경로"
+
+msgid "Create"
+msgstr "생성"
+
+msgid "Error"
+msgstr "오류"
+
+msgid "Select by name"
+msgstr "이름으로 선택"
+
+msgid ""
+"Icon load failed:\n"
+" Path:{0}"
+msgstr ""
+"아이콘 불러오기 실패:\n"
+" 경로:{0}"
+
+msgid "SpringBoneWindow icon directory not found"
+msgstr "SpringBoneWindow Icon 디렉토리를 찾을수 없습니다."
+
+msgid "Load"
+msgstr "불러오기"
+
+msgid "Save"
+msgstr "저장하기"
+
+msgid "Dynamics CSV"
+msgstr "Dynamics CSV"
+
+msgid ""
+"Add\n"
+"SpringBone"
+msgstr ""
+"스프링본\n"
+"추가"
+
+msgid "Create Origin"
+msgstr "Pivot 설정"
+
+msgid "Create or Update Manager"
+msgstr "매니저 생성 및 업데이트"
+
+msgid "Do Initial Setup"
+msgstr "설정 초기화"
+
+msgid "Fit to initial bone list"
+msgstr "본 리스트 정보 초기화"
+
+msgid "Mirror SpringBones"
+msgstr "Mirror 윈도우"
+
+msgid "Select this and child bones"
+msgstr "본과 자식 본 선택"
+
+msgid "Delete SpringBone"
+msgstr "선택된 스프링본 삭제"
+
+msgid "Delete Managers and Bones of Selection and Children"
+msgstr "선택된 오브젝트 이하 스프링매니저와 스프링본 삭제"
+
+msgid "Collision"
+msgstr "콜라이더"
+
+msgid "Sphere"
+msgstr "구"
+
+msgid "Capsule"
+msgstr "캡슐"
+
+msgid "Quad"
+msgstr "패널"
+
+msgid "Fit capsule place to parent"
+msgstr "캡슐 위치를 부모로"
+
+msgid "Exclude collision from SpringBone"
+msgstr "스프링본 콜라이더 제거"
+
+msgid "Delete collider of selection and children"
+msgstr "대상 및 자식 콜라이더 삭제"
+
+msgid "Cleanup"
+msgstr "정리하기"
+
+msgid "Show"
+msgstr "Show"
+
+msgid "Show only selected bones"
+msgstr "선택된 본만 표시"
+
+msgid "Show bone collisions"
+msgstr "본의 콜라이더 표시"
+
+msgid "Show only selected colliders"
+msgstr "선택된 콜라이더만 표시"
+
+msgid "Show bone names"
+msgstr "본 이름 표시"
+
+msgid "Selecting {0} objects"
+msgstr "{0} 개별 오브젝트 선택 중"
+
+msgid "Set Parent"
+msgstr "부모 선택"
+
+msgid "New Parent"
+msgstr "New Parent"
+
+msgid "Dynamics bone not found:{0}"
+msgstr "다이나믹본을 찾을 수 없습니다:{0}"
+
+msgid "Stop Play Mode"
+msgstr "Stop Play Mode"
+
+msgid "Select one or more objects."
+msgstr "하나 이상의 오브젝트를 선택하세요"
+
+msgid "Select only one root object"
+msgstr "루트 오브젝트 하나만 선택하세요"
+
+msgid ""
+"Do you really want to remove all\n"
+"SpringBones and managers under this object?\n"
+"\n{0}"
+msgstr ""
+"오즈젝트와 자식에 포함된 모든\n"
+"스프링본과 매니저를 삭제합니다\n"
+"\n{0}"
+
+msgid "Delete SpringBone and Manager"
+msgstr "스프링본과 매니저 삭제"
+
+msgid "Delete"
+msgstr "삭제"
+
+msgid "Can't update while in Play Mode"
+msgstr "Play Mode 상태에서 변경할 수 없습니다"
+
+msgid "Select only one SpringManager"
+msgstr "스프링 매니저 하나만 선택하세요"
+
+msgid ""
+"Do you want to update secondary bones from bone list?\n"
+"\n"
+"This will remove all SpringBones that are not listed,\n"
+"and will add SpringBones missing in model.\n"
+"\n"
+"SpringManager: {0}\n"
+msgstr ""
+"본 리스트의 서브 본을 업데이트 하시겠습니까?\n"
+"\n"
+"리스트에 없는 스프링본은 삭제되며,\n"
+"모델에 없는 스프링본은 추가합니다.\n"
+"\n"
+"SpringManager: {0}\n"
+
+msgid "Update from bone list"
+msgstr "본 리스트 업데이트"
+
+msgid "Update"
+msgstr "Update"
+
+msgid "Ignore"
+msgstr "Ignore"
+
+msgid "Component"
+msgstr "Component"
+
+msgid "Name"
+msgstr "이름"
+
+msgid "Select"
+msgstr "선택"
+
+msgid "New Parent"
+msgstr "New Parent"
+
+msgid "You must stop Playmode first."
+msgstr "작업을 위해 플레이모드를 중단하세요"
+
+msgid "Align capsules to parents"
+msgstr "캡슐을 부모로"
+
+msgid "Do you really want to remove collisions from selected SpringBones?"
+msgstr "선택된 스프링본의 콜라이더 제거"
+
+msgid "Remove Collisions"
+msgstr "콜라이더 제거"
+
+msgid "Remove duplicate components"
+msgstr "중복된 컴포넌트 삭제"
+
+msgid "Cleanup SpringBones"
+msgstr "Cleanup SpringBones"
+
+msgid "Do you really want to cleanup dynamics?"
+msgstr "다이나믹본을 정리합니다"
+
+msgid "Cleanup Dynamics"
+msgstr "Cleanup Dynamics"
+
+msgid "Remove all selected child colliders"
+msgstr "선택된 오브젝트의 자식 콜라이더 모두 삭제"
+
+msgid "Do you really want to remove all colliders from children?"
+msgstr "선택된 오브젝트의 자식 콜라이더를 모두 삭제합니다"
+
+msgid "Remove Colliders"
+msgstr "Remove Colliders"
+
+msgid "Remove"
+msgstr "Remove"
+
+msgid "Delete selected bones"
+msgstr "선택된 본 삭제"
+
+msgid "Show Spring Window"
+msgstr "스프링 윈도우 열기"
+
+msgid "Select All SpringBone"
+msgstr "스프링본 전체 선택"
+
+msgid "Update SpringBone List"
+msgstr "스피링본 리스트 업데이트"
+
+msgid "Select Bone"
+msgstr "본 선택"
+
+msgid "Select Base Point"
+msgstr "Pivot 선택"
+
+msgid "Manager"
+msgstr "매니저"
+
+msgid "Enable"
+msgstr "Enable"
+
+msgid "Change SpringBone Enablement"
+msgstr "SpringBone 상태 변경"
+
+msgid "Show Inspector"
+msgstr "인스펙터 표시"
+
+msgid "Limit Y axis"
+msgstr "Y 축 각도 제한"
+
+msgid "Limit Z axis"
+msgstr "Z 축 각도 제한"
+
+msgid "Hardness"
+msgstr "경도"
+
+msgid "Air Resistance"
+msgstr "공기저항"
+
+msgid "Gravity"
+msgstr "중력"
+
+msgid "Wind Influence"
+msgstr "바람 영향력"
+
+msgid "Pivot"
+msgstr "Pivot"
+
+msgid "Angular Stiffness"
+msgstr "회전 경도"
+
+msgid "Target"
+msgstr "Target"
+
+msgid "Limit Angle"
+msgstr "각도 제한"
+
+msgid "Limit Length"
+msgstr "거리 제한"
+
+msgid "Collision Decision"
+msgstr "충돌 판정"
+
+msgid "Radius"
+msgstr "Radius"
+
+msgid "Force"
+msgstr "힘"
+
+msgid "Lower Limit"
+msgstr "하한선"
+
+msgid "Upper Limit"
+msgstr "상한선"
+
+msgid "Uniform Lower Limit"
+msgstr "하한으로 통일"
+
+msgid "Uniform Upper Limit"
+msgstr "상한으로 통일"
+
+msgid "Uniform"
+msgstr "동시에 변경"
+
+msgid "Inversion"
+msgstr "반전"
